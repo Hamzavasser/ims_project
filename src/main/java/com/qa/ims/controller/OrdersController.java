@@ -1,14 +1,17 @@
 package com.qa.ims.controller;
 
+
 import java.lang.System.Logger;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 
-import com.qa.ims.persistence.domain.Customer;
+import com.qa.ims.persistence.dao.Dao;
 import com.qa.ims.persistence.domain.Orders;
 
-public class OrdersController implements CrudController<Orders> {
+
+
+public class OrdersController implements Dao<Orders> {
 	public static final Logger LOGGER = LogManager.getLogger();
 
 	@Override
@@ -23,6 +26,7 @@ public class OrdersController implements CrudController<Orders> {
 		return null;
 	}
 
+	@Override
 	@Override
 	public Orders update() {
 		// TODO Auto-generated method stub

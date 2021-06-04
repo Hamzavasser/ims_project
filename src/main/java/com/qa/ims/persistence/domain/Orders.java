@@ -4,12 +4,19 @@ package com.qa.ims.persistence.domain;
 public class Orders {
 	private Long orderId;
 	private Long customId;
+	private Long itemId;
 	
 	public Orders(Long orderId, Long customId) {
 		this.orderId = orderId;
 		this.customId = customId;
 	}
 	
+	public Orders(Long orderId, Long customId, Long itemId) {
+		this.orderId = orderId;
+		this.customId = customId;
+		this.itemId = itemId;
+	}
+
 	public Long getOrderId() {
 		return orderId;
 	}
